@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="TerrainDemo\Include\HeightMap.h">
+      <Filter>TerrainDemo\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainDemo\Include\HeightMapLoader.h">
+      <Filter>TerrainDemo\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="TerrainDemo\Include\Terrain.h">
+      <Filter>TerrainDemo\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Include\DebugUtilities.h">
+      <Filter>Utilities\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\Include\Vector2D.h">
+      <Filter>Utilities\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\dcext.h">
+      <Filter>QE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qe.h">
+      <Filter>QE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qebase.h">
+      <Filter>QE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qec.h">
+      <Filter>QE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qefn.h">
+      <Filter>QE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qegl.h">
+      <Filter>QE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qeinst.h">
+      <Filter>QE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qenet.h">
+      <Filter>QE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qesl.h">
+      <Filter>QE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\qesnd.h">
+      <Filter>QE</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="TerrainDemo">
+      <UniqueIdentifier>{fc8de178-4c84-4ae1-a473-62a4f0b20309}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TerrainDemo\Include">
+      <UniqueIdentifier>{984535f6-541d-4393-bb72-54ef3edf4c12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TerrainDemo\Source">
+      <UniqueIdentifier>{c88db859-ed5e-42b9-aa5b-b5f07d8aa09c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{e7a846c6-dc3d-497f-b93a-79061da3664c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Include">
+      <UniqueIdentifier>{f7d36dec-8573-49d9-9a5e-f4077b5edc50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Source">
+      <UniqueIdentifier>{75cc7d5a-42c9-4d8a-994f-87ea2538a13a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QE">
+      <UniqueIdentifier>{aa01e866-6762-403f-bfff-f77692fd076b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TerrainDemo\Source\HeightMap.cpp">
+      <Filter>TerrainDemo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainDemo\Source\HeightMapLoader.cpp">
+      <Filter>TerrainDemo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainDemo\Source\qeStartup.c">
+      <Filter>TerrainDemo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainDemo\Source\Terrain.cpp">
+      <Filter>TerrainDemo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="TerrainDemo\Source\TerrainMain.cpp">
+      <Filter>TerrainDemo\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Source\DebugUtilities.cpp">
+      <Filter>Utilities\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Source\Vector2D.cpp">
+      <Filter>Utilities\Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
