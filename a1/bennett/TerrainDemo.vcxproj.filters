@@ -46,6 +46,9 @@
     <ClInclude Include="..\..\inc\qesnd.h">
       <Filter>QE</Filter>
     </ClInclude>
+    <ClInclude Include="Utilities\Include\FileUtilities.h">
+      <Filter>Utilities\Include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="TerrainDemo">
@@ -90,6 +93,9 @@
       <Filter>Utilities\Source</Filter>
     </ClCompile>
     <ClCompile Include="Utilities\Source\Vector2D.cpp">
+      <Filter>Utilities\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\Source\FileUtilities.cpp">
       <Filter>Utilities\Source</Filter>
     </ClCompile>
   </ItemGroup>

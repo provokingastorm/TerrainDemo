@@ -1,14 +1,18 @@
-# Local Project Files
+# Local Configuration
 *.vcxproj.user
 
 # Debugger Files
 *.pdb
 *.idb
 
-# generated qe folders
+# Generated Project Folders
 a1/bennett/.vs
 a1/bennett/intermediate
 
-# generated qe files
+# Generated Project Files
 bin/TerrainDemo.exe
+bin/*.raw
 qelog.txt
+
+# Personal Files
+_exclude/

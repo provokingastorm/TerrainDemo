@@ -57,7 +57,7 @@
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)TerrainDemo\Include;$(SolutionDir)Utilities\Include;$(SolutionDir)../../inc;/program files/microsoft platform sdk/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DEBUG=1;WIN32_LEAN_AND_MEAN;NOCOMM;BUILD_MSVC=1;_DEBUG=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <MinimalRebuild>true</MinimalRebuild>
+      <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader />
@@ -126,6 +126,7 @@
     <ClInclude Include="TerrainDemo\Include\HeightMapLoader.h" />
     <ClInclude Include="TerrainDemo\Include\Terrain.h" />
     <ClInclude Include="Utilities\Include\DebugUtilities.h" />
+    <ClInclude Include="Utilities\Include\FileUtilities.h" />
     <ClInclude Include="Utilities\Include\Vector2D.h" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +136,7 @@
     <ClCompile Include="TerrainDemo\Source\Terrain.cpp" />
     <ClCompile Include="TerrainDemo\Source\TerrainMain.cpp" />
     <ClCompile Include="Utilities\Source\DebugUtilities.cpp" />
+    <ClCompile Include="Utilities\Source\FileUtilities.cpp" />
     <ClCompile Include="Utilities\Source\Vector2D.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

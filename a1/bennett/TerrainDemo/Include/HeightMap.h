@@ -1,5 +1,5 @@
-#ifndef HeightMap_h
-#define HeightMap_h
+#ifndef HeightMap_H
+#define HeightMap_H
 
 class HeightMap
 {
@@ -29,6 +29,6 @@ private:
 
 };
 
-#endif // HeightMap_h
+#endif // HeightMap_H
 
 // EOF

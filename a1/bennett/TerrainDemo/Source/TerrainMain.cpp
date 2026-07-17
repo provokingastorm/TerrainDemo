@@ -1,6 +1,7 @@
 #include "HeightMapLoader.h"
 #include "HeightMap.h"
 #include "DebugUtilities.h"
+#include "FileUtilities.h"
 #include "qe.h"
 #include "qesl.h"
 #include <stdlib.h>
@@ -10,7 +11,7 @@
 namespace TerrainTexture
 {
     static char*            TerrainTextureName              = "terrain";
-    static char*            TerrainTexturePath              = "../content/terrain/terrain.tga";
+    static char*            TerrainTexturePath              = "../a1/bennett/content/terrain/terrain.tga";
 
     static const float      TerrainTextureWidth             = 1024.0f;
     static const float      TerrainTextureHeight            = 1024.0f;
@@ -18,8 +19,8 @@ namespace TerrainTexture
 
 namespace HeightMapTexture
 {
-    static const char*      HeightMapPath                   = "../content/terrain/height_map_test.raw";
-    static const char*      GeneratedHeightMapPath          = "../content/terrain/terrain_map_generated.raw";
+    static const char*      HeightMapPath                   = "../a1/bennett/content/terrain/height_map_test.raw";
+    static const char*      GeneratedHeightMapPath          = "../a1/bennett/content/terrain/terrain_map_generated.raw";
     static const int        HeightMapSize                   = 512;
     static const int        GeneratedHHeightMapSize         = 512;
 }
@@ -229,7 +230,15 @@ int CameraReset(ptr sf,char *sp,...)
 int SetupHeightMap(ptr sf,char *sp,...)
 {
     CleanupHeightMap();
-    Map = &ChzDereference(Loader).CreateHeightMap(HeightMapPath, HeightMapSize);
+
+    TCHAR szEXEPath[2048];
+    GetModuleFileName(NULL, szEXEPath, 2048);
+
+    StripFilenameFromPath(szEXEPath);
+
+    strcat(szEXEPath, HeightMapPath);
+
+    Map = &ChzDereference(Loader).CreateHeightMap(szEXEPath, HeightMapSize);
     return 0;
 }
 
@@ -239,9 +248,17 @@ int SaveHeightMap(ptr sf,char *sp,...)
 
     if (Map)
     {
+        TCHAR szEXEPath[2048];
+        GetModuleFileName(NULL, szEXEPath, 2048);
+
+        StripFilenameFromPath(szEXEPath);
+
         char buffer[50];
         sprintf(buffer, "heightmap_%d.raw", NumOfSaves);
-        bool bWasSaved = ChzDereference(Loader).ExportHeightMap(ChzDereference(Map), buffer);
+
+        strcat(szEXEPath, buffer);
+
+        bool bWasSaved = ChzDereference(Loader).ExportHeightMap(ChzDereference(Map), szEXEPath);
 
         if (bWasSaved)
         {
@@ -375,7 +392,7 @@ int qeMain(int argc,chr *argv[])
     //int ImageLoadResult = qeImgNew(TerrainTextureName, 0, TerrainTexturePath);
     //qeBreakOnError(ImageLoadResult);
 
-    int AddFncTableResult = AddFncTableResult = qeslAddFncTable(TerrainConsoleCommands, NUM(TerrainConsoleCommands) );
+    int AddFncTableResult = qeslAddFncTable(TerrainConsoleCommands, NUM(TerrainConsoleCommands) );
     qeBreakOnError( AddFncTableResult );
 
     qeObj* ProcessInputFunction = qeObjAddFnc(ProcessInput);
